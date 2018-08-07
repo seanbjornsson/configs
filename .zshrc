@@ -49,8 +49,13 @@ fixup(){
   git add . ;  git commit --fixup "$@"
 }
 
+# fixup followed by an interactive rebase
+fixupr(){
+  fixup "$@"; gria head^^
+}
+
 # Autosquash alias. Useful with the above fixup command.
-alias gri="git rebase -i --autosquash"
+alias gria="git rebase -i --autosquash"
 
 # Simple no verify commit command
 alias gcn="git commit --no-verify -v"
@@ -64,8 +69,30 @@ alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commi
 # Gwip and push
 alias gwipp="gwip; gp"
 
+# - - - - [ GIT FLOW ] - - - -
+
+# feature start
+alias gffs='git flow feature start'
+
+# feature finish
+alias gfff='git flow feature finish'
+
+# feature publish
+alias gffp='git flow feature publish'
+
+# release start
+alias gfrs='git flow release start'
+
+# release publish
+alias gfrp='git flow release publish'
 
 # - - - - [ OTHER ] - - - -
 
 # Shorten jump command, as introduced by the zsh plugin
 alias j=jump
+
+# Mysql root login by default
+alias mysqlr='mysql -uroot'
+
+# Bundle
+alias be='bundle exec'
