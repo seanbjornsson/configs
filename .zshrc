@@ -21,7 +21,7 @@ COMPLETION_WAITING_DOTS="true"
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 HIST_STAMPS="mm/dd/yyyy"
 
-plugins=(zeus git jump rails ruby)
+plugins=(zeus git jump rails ruby colored-man-pages osx gem bundler)
 
 source $ZSH/oh-my-zsh.sh
 
