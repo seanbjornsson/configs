@@ -70,7 +70,7 @@ alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commi
 alias gwipp="gwip; gp"
 
 # add and commit changelog updates
-uc="git add CHANGELOG.md; git commit -n '[skip ci] Update Changelog'"
+alias uc="git add CHANGELOG.md; git commit -n '[skip ci] Update Changelog'"
 
 # - - - - [ GIT FLOW ] - - - -
 
